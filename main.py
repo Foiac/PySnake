@@ -1,6 +1,7 @@
 # This is a sample Python script.
 from game.speech import speech
-from game.scenario import scenario
+from game.scenarioSnake import scenarioSnake
+from game.scenarioMaze import scenarioMaze
 from inteligence.reinforcementLearningSnake import reiforcementLearning
 import speech_recognition as sr
 
@@ -10,12 +11,12 @@ import pygame
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    #teste = scenarioMaze()
+    #teste.game()
     gameMode = int(input("1 - Free Mode\n2 - Not Learning Colision\n3 - Learning Colision\nType Game Mode:\n"))
-    teste = scenario(gameMode)
+    teste = scenarioSnake(gameMode)
     teste.game()
     #teste = speech();
     #teste.listener()
-    #ar = reiforcementLearning(4, 4, 10, -100, 0.2)
-    #ar.startLearning(2,2,4,4)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

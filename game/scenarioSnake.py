@@ -4,7 +4,7 @@ import pygame
 from random import randint
 from inteligence.reinforcementLearningSnake import reiforcementLearning
 
-class scenario:
+class scenarioSnake:
 
     def __init__(self, gameMode):
         self.passos = None
@@ -15,7 +15,7 @@ class scenario:
         self.running = True
         self.dt = 0
 
-        self.speed = 120
+        self.speed = 10
 
         self.player_pos = pygame.Vector2(self.screen.get_width() / 2, self.screen.get_height() / 2)
 
@@ -31,9 +31,9 @@ class scenario:
     def game(self):
         self.clock = pygame.time.Clock()
 
-        ar = reiforcementLearning(8, 4, 0.7, 0.3, 0.05, self.gameMode)
+        ar = reiforcementLearning(8, 4, 0.7, 0.3, 0.01, self.gameMode)
         if self.gameMode == 2:
-            ar = reiforcementLearning(4, 4, 0.7, 0.3, 0.05, self.gameMode)
+            ar = reiforcementLearning(4, 4, 0.7, 0.3, 0.01, self.gameMode)
 
         self.passos = 0
         self.appleNumber = 1
